@@ -1,0 +1,4 @@
+# Cloudflare Pages (free tier): static files only. No Functions, KV, D1 or secrets.
+name = "planlab-account-assurance"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-10-01"

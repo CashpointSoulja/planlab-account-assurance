@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Account assurance · UK electricity transmission</title>
+<meta name="description" content="A candidate's account plan for five UK electricity transmission accounts: public evidence, hypotheses to test, unknowns, programme overlap and one worked call. Independent concept by Ayo Ahmed, not affiliated with Planlab.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f6f6f2">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/inter-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#report">Skip to account brief</a>
+
+<header class="topbar" role="banner">
+  <div class="brand">
+    <img src="assets/planlab-logo.svg" width="49" height="24" alt="Planlab">
+    <span class="brand-name">Account assurance</span>
+  </div>
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <span class="crumb crumb-segment"><span class="crumb-main">UK electricity transmission</span><small>Segment</small></span>
+    <span class="sep sep-segment" aria-hidden="true">/</span>
+    <div class="crumb crumb-account">
+      <button type="button" id="account-menu-button" class="crumb-button" aria-haspopup="menu" aria-expanded="false" aria-controls="account-menu">
+        <i class="ws-badge" id="crumb-badge" aria-hidden="true">NG</i>
+        <span class="crumb-text"><span class="crumb-main" id="crumb-account">Account</span><small>Account</small></span>
+        <svg class="caret" viewBox="0 0 8 8" aria-hidden="true"><path d="M1.5 3l2.5 2.5L6.5 3"/></svg>
+      </button>
+      <ul id="account-menu" class="menu" role="menu" aria-labelledby="account-menu-button" hidden></ul>
+    </div>
+    <span class="sep sep-project" aria-hidden="true">/</span>
+    <span class="crumb crumb-project"><span class="crumb-main" id="crumb-project">Project</span><small>Project</small></span>
+  </nav>
+  <div class="actions">
+    <button type="button" class="btn" id="sources-button" aria-haspopup="dialog" aria-controls="sources-drawer">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2h5l3 3v9H4z M9 2v3h3"/></svg>
+      <span>Sources</span><span class="count" id="sources-count"></span>
+    </button>
+    <button type="button" class="btn" id="print-button">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6V2h8v4 M4 12H2.5V6h11v6H12 M4 9.5h8V14H4z"/></svg>
+      <span>Print</span>
+    </button>
+    <button type="button" class="btn btn-primary" id="export-button">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8 M4.5 6.5L8 10l3.5-3.5 M3 13h10"/></svg>
+      <span>Export brief</span>
+    </button>
+  </div>
+</header>
+
+<div class="workspace">
+  <aside class="rail" aria-labelledby="rail-title">
+    <div class="rail-head">
+      <h2 id="rail-title">Accounts</h2>
+      <span class="rail-meta">5 · in my order</span>
+    </div>
+    <ol class="account-list" id="account-list" aria-label="Accounts, in my order of priority"></ol>
+    <button type="button" class="overlap-card" id="overlap-card">
+      <span class="eyebrow">Programme overlap</span>
+      <strong>5 names, 3 programme threads</strong>
+      <span class="muted">4 of 5 sit in the National Grid ecosystem; Netherton appears twice.</span>
+    </button>
+    <p class="label-unofficial">Independent concept by Ayo Ahmed, not affiliated with Planlab. Public sources only; no prospect contact.</p>
+  </aside>
+
+  <main class="centre" id="report" tabindex="-1">
+    <article class="report" aria-labelledby="account-title">
+      <header class="report-head">
+        <p class="eyebrow"><span class="dot-mark" aria-hidden="true"></span><span id="report-eyebrow">Account brief</span></p>
+        <div class="title-row">
+          <h1 id="account-title">Account</h1>
+          <span class="pill" id="action-pill"></span>
+        </div>
+        <p class="report-sub" id="account-sub"></p>
+        <div class="tabs" role="tablist" aria-label="Views">
+          <button role="tab" id="tab-brief" aria-controls="panel-brief" aria-selected="true">Brief</button>
+          <button role="tab" id="tab-overlap" aria-controls="panel-overlap" aria-selected="false" tabindex="-1">Overlap</button>
+          <button role="tab" id="tab-call" aria-controls="panel-call" aria-selected="false" tabindex="-1">Call kit</button>
+        </div>
+      </header>
+
+      <section role="tabpanel" id="panel-brief" aria-labelledby="tab-brief" class="panel"></section>
+      <section role="tabpanel" id="panel-overlap" aria-labelledby="tab-overlap" class="panel" hidden></section>
+      <section role="tabpanel" id="panel-call" aria-labelledby="tab-call" class="panel" hidden></section>
+    </article>
+  </main>
+
+  <aside class="pane" aria-labelledby="pane-title">
+    <div class="pane-head">
+      <h2 id="pane-title">Qualification</h2>
+      <span class="muted">Proposed · to validate with Carlos</span>
+    </div>
+    <div id="pane-body"></div>
+  </aside>
+</div>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="sources-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" hidden>
+  <header class="drawer-head">
+    <div>
+      <h2 id="drawer-title">Sources</h2>
+      <p class="muted" id="drawer-sub">Every claim links to a public source. Checked 3 November 2026.</p>
+    </div>
+    <button type="button" class="icon-btn" id="drawer-close" aria-label="Close sources">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+    </button>
+  </header>
+  <fieldset class="seg" id="drawer-scope">
+    <legend class="sr-only">Show sources for</legend>
+    <label><input type="radio" name="scope" value="account" checked><span>This account</span></label>
+    <label><input type="radio" name="scope" value="all"><span>All accounts</span></label>
+  </fieldset>
+  <div class="drawer-body" id="drawer-body"></div>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<footer class="print-foot">Independent concept by Ayo Ahmed, not affiliated with Planlab. Public sources, checked 3 November 2026. No prospect contact has occurred.</footer>
+<noscript><p class="noscript">This workspace needs JavaScript to switch accounts. The same content is in the repository's research folder.</p></noscript>
+</body>
+</html>

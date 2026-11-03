@@ -1,0 +1,146 @@
+{
+  "checked": "2026-11-03",
+  "customerStatus": "UNKNOWN for all; check Planlab CRM before outreach",
+  "accounts": [
+    {
+      "id": "nget",
+      "name": "National Grid Electricity Transmission",
+      "seat": "Owner",
+      "project": "EGL3 / EGL4 / Grimsby to Walpole",
+      "priority": "Strategic, slower route",
+      "buyer": "Planning Manager or Head of Project Controls, Strategic Infrastructure. Exact contact unverified.",
+      "evidence": [
+        {
+          "text": "Ofgem raised concerns that the submitted QSRA did not model fastest delivery scenarios or acceleration opportunities. This is a published regulatory finding, not proof of a current software gap.",
+          "date": "9 December 2025",
+          "url": "https://www.ofgem.gov.uk/sites/default/files/2025-12/material-scope-change-decision.pdf"
+        },
+        {
+          "text": "EGL4 awarded HVDC converter work to Siemens Energy after cable award to Prysmian. Main construction expected2028 subject to consent, completion scheduled2033.",
+          "date": "30 March 2026",
+          "url": "https://www.nationalgrid.com/eastern-green-link-4-confirms-ps3bn-supply-chain-boost-support-uk-jobs-energy-security-and-reduce"
+        }
+      ],
+      "hypothesis": "A team testing delivery assumptions and mitigations may value quicker repeatable scenario work. Ask who owns this analysis and what slows re-runs.",
+      "opener": "Ofgem raised acceleration modelling in its December decision on the Lincolnshire projects. Who owns the scenario assumptions and re-runs in your team?",
+      "blockers": [
+        "Critical-infrastructure security/procurement review",
+        "QSRA could be owned by JV or consultant",
+        "Source is historic; verify current analysis priorities"
+      ],
+      "overlap": "NGET frameworks also include Murphy, Balfour and M Group; do not count them as independent programmes."
+    },
+    {
+      "id": "ssen",
+      "name": "SSEN Transmission",
+      "seat": "Owner",
+      "project": "Netherton Hub",
+      "priority": "Live construction trigger",
+      "buyer": "Planning or Project Controls lead for Netherton. Darren Main publicly named as Project Director, not verified purchasing owner.",
+      "evidence": [
+        {
+          "text": "SSEN awarded Balfour Beatty the main construction works following enabling work. Netherton includes400kV and132kV substations and HVDC converter stations.",
+          "date": "25 June 2026",
+          "url": "https://www.ssen-transmission.co.uk/news/news--views/2026/6/ssen-transmission-awards-contract-to-deliver-main-construction-works-for-netherton-hub"
+        }
+      ],
+      "hypothesis": "Moving from enabling into multi-package main works may make interface assumptions and update cycles worth discussing. Internal pain and current tooling unknown.",
+      "opener": "With Netherton moving from enabling to main works across substations and converter stations, who owns the integrated programme between those packages?",
+      "blockers": [
+        "Owner procurement may be slow",
+        "Existing programme tools and access requirements unknown",
+        "Do not use provisional inquiry dates as completed events"
+      ],
+      "overlap": "Same Netherton programme as Balfour account, not a second independent opportunity."
+    },
+    {
+      "id": "balfour",
+      "name": "Balfour Beatty",
+      "seat": "Contractor",
+      "project": "Netherton Hub / Power Transmission & Distribution",
+      "priority": "Contractor-first discovery",
+      "buyer": "Head of Planning or Project Controls, Power T&D. Tony Wilson publicly named as PT&D Managing Director; sponsor level only.",
+      "evidence": [
+        {
+          "text": "Awarded Netherton Hub main construction by SSEN following initial works.",
+          "date": "25 June 2026",
+          "url": "https://www.ssen-transmission.co.uk/news/news--views/2026/6/ssen-transmission-awards-contract-to-deliver-main-construction-works-for-netherton-hub"
+        },
+        {
+          "text": "Named as one of five partners allocated National Grid overhead-line reconductoring work; Tony Wilson quoted as PT&D Managing Director.",
+          "date": "23 June 2026",
+          "url": "https://www.nationalgrid.com/next-phase-national-grids-electricity-transmission-partnership-boost-overhead-line-capacity"
+        }
+      ],
+      "hypothesis": "Work across multiple owners may create questions about shared crews, plant and schedule updates. This is an inference to test, not an observed resource conflict.",
+      "opener": "With Netherton main works and the National Grid reconductoring partnership both in view, who owns the cross-project picture for crews and plant in Power T&D?",
+      "blockers": [
+        "Client may issue/control programmes",
+        "Group IT and procurement",
+        "No verified buyer name or confirmed tool stack"
+      ],
+      "overlap": "Netherton shared with SSEN; National Grid programme shared with other listed contractors."
+    },
+    {
+      "id": "murphy",
+      "name": "Murphy",
+      "seat": "Contractor",
+      "project": "EGL1 Hawthorn Pit substation",
+      "priority": "Specific package, current phase",
+      "buyer": "Planning Manager or Project Controls lead, Murphy Energy / Hawthorn Pit. Liam Corr publicly named as Energy Managing Director, sponsor only.",
+      "evidence": [
+        {
+          "text": "Murphy responsible for the400kV substation works package for National Grid Electricity Transmission on EGL1.",
+          "date": "17 February 2025",
+          "url": "https://www.murphygroup.com/construction-underway-on-subsea-electricity-superhighway/"
+        },
+        {
+          "text": "Project update says main piling complete at both sites. Murphy delivering Hawthorn Pit substation and connection works; teams completing foundations before buildings and electrical installation. Do not pitch the older July piling delay as unresolved.",
+          "date": "Undated current project update; checked3 November2026",
+          "url": "https://www.easterngreenlink1.co.uk/news/main-foundation-piling-works-completed"
+        },
+        {
+          "text": "Murphy appointed to National Grid overhead-line framework after substation framework; Liam Corr quoted as energy MD.",
+          "date": "23 June 2026",
+          "url": "https://www.nationalgrid.com/next-phase-national-grids-electricity-transmission-partnership-boost-overhead-line-capacity"
+        }
+      ],
+      "hypothesis": "The transition from foundations towards buildings and equipment may be a useful moment to ask how package interfaces and revised dates are reconciled.",
+      "opener": "The EGL1 update says piling at Hawthorn Pit is complete and foundations are progressing. How does your team reconcile changes before buildings and electrical installation start?",
+      "blockers": [
+        "NGET/JV may own integrated schedule and tools",
+        "Current phase checked publicly, detailed baseline unknown",
+        "No confirmed planning contact"
+      ],
+      "overlap": "National Grid customer/framework concentration; same owner ecosystem as NGET."
+    },
+    {
+      "id": "mgroup",
+      "name": "M Group",
+      "seat": "Contractor",
+      "project": "Strathaven to Smeaton 400kV overhead line",
+      "priority": "Named corridor, clear scope",
+      "buyer": "Planning Manager, M Group Energy overhead lines. David Maddocks publicly named Managing Director - Overhead Lines; sponsor only.",
+      "evidence": [
+        {
+          "text": "Awarded\u00a3110m contract replacing more than70km of overhead line on Strathaven to Smeaton route.",
+          "date": "30 July 2026",
+          "url": "https://www.scottishpower.com/w/-110m-investment-in-scotlands-grid"
+        },
+        {
+          "text": "M Group confirms contract and names David Maddocks as Managing Director - Overhead Lines.",
+          "date": "6 August 2026",
+          "url": "https://mgroupltd.com/news-insights/m-group-wins-110-million-scottishpower-contract/"
+        }
+      ],
+      "hypothesis": "A named refurbishment alongside other owner programmes may create a baseline/interface question. No assumption about P6 or who controls scheduling.",
+      "opener": "On Strathaven to Smeaton, is the refurbishment programme owned by your overhead-lines planners or issued by SP Energy Networks?",
+      "blockers": [
+        "Wrong scheduling function: field dispatch is not project controls",
+        "Divisional buying centre unverified",
+        "Client-issued baseline could limit contractor tooling"
+      ],
+      "overlap": "Also National Grid ETP partner; verify whether procurement/tooling decisions are shared."
+    }
+  ]
+}

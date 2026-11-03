@@ -1,0 +1,17 @@
+{
+  "name": "planlab-account-assurance",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Account assurance workspace: five UK electricity transmission accounts, public evidence and one worked call. Independent concept by Ayo Ahmed, not affiliated with Planlab.",
+  "type": "module",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/build.mjs && node scripts/serve.mjs dist 4173",
+    "test": "node scripts/build.mjs && node --test --test-concurrency=1 tests/data.test.mjs tests/e2e.test.mjs",
+    "test:data": "node --test tests/data.test.mjs",
+    "check:links": "node scripts/check-links.mjs",
+    "deploy": "npm run build && npx wrangler pages deploy dist --project-name planlab-account-assurance"
+  },
+  "engines": { "node": ">=20" }
+}
