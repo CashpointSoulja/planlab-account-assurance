@@ -2,6 +2,9 @@
 
 **Independent concept by Ayo Ahmed, not affiliated with Planlab.**
 
+**Live demo: https://planlab-account-assurance.pages.dev/**
+(this deployment, immutable: https://cb9ab1eb.planlab-account-assurance.pages.dev). Deployment details and live-host checks: [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
+
 1. I picked one segment, UK electricity transmission, and checked public, dated sources on five accounts: two owners and three contractors.
 2. The workspace separates what the sources say from what I'd test, what is unknown and what could block a conversation. It also shows that the five names share programmes, so they are not five independent opportunities.
 3. I worked one account (National Grid Electricity Transmission) through to a role-play call, discovery questions and objections. No prospect has been contacted, and nothing here reports a result.
@@ -62,6 +65,8 @@ That checks every cited URL from your own network.
 
 ## Deploy (free, static)
 
+The site is live on Cloudflare Pages (free tier) at https://planlab-account-assurance.pages.dev/, deployed from commit `8e97fc8` by direct upload. The full record, including independent checks against production, is in [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
+
 `npm run build` writes a self-contained static site to `dist/`. It needs no server code, database, API keys or secrets.
 
 - **Cloudflare Pages:** run `npx wrangler pages deploy dist --project-name planlab-account-assurance` after `npx wrangler login`. Or create a Pages project in the dashboard and upload `dist/`. `dist/_headers` sets a strict content security policy and `noindex`.
@@ -87,6 +92,7 @@ tests/           data-integrity and browser tests
 - [Viability memo: why this fits the Founding SDR job](docs/VIABILITY.md)
 - [Decisions](docs/DECISIONS.md)
 - [Test results](docs/TEST-RESULTS.md)
+- [Deployment and live-host checks](docs/DEPLOYMENT.md)
 - [Roadmap](docs/ROADMAP.md)
 - [Brand reference](docs/BRAND.md) and [style guide](docs/STYLE-GUIDE.md)
 

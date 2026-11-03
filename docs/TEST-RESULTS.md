@@ -87,3 +87,14 @@ I inspected screenshots at 1440, 390 and 320px and the print preview (see [scree
 
 - **Source links.** The build environment's network policy blocks all eleven cited hosts (Ofgem, National Grid, SSEN Transmission, Murphy, Eastern Green Link 1, ScottishPower, M Group and planlab.ai). Each request returned no response (`000`), so I could not confirm here that the links resolve to the intended content. The account research was independently verified before it was supplied. Run `npm run check:links` from an open network to re-check.
 - **Brand capture.** planlab.ai was also blocked, so the brand values come from the browser capture supplied on 3 November 2026. See [BRAND.md](BRAND.md).
+
+## Live production checks (independent)
+
+After deployment to Cloudflare Pages on 3 November 2026, I checked the live site outside the build environment:
+
+| Check | Where | Result |
+|---|---|---|
+| `npm ci` and `npm test` on a clean checkout of `8e97fc8` | Local machine | 25 of 25 passed |
+| All 17 browser tests adapted to the production origin | https://planlab-account-assurance.pages.dev/ | 17 of 17 passed |
+
+The production-origin adaptation was local and is not committed. The build environment cannot reach `pages.dev`, so it did not run these live checks. See [DEPLOYMENT.md](DEPLOYMENT.md).
