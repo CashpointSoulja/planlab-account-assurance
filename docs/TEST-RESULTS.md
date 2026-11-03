@@ -1,12 +1,14 @@
 # Test results
 
-Run on 3 November 2026 with Node v22.23.4 and Playwright 1.63.0 (headless Chromium), against the built `dist/`.
+Run on 3 November 2026 with Node v22.23.4 and Playwright 1.63.0 (headless Chromium), against the built `dist/`. Playwright is pinned as the only dev dependency, so a fresh clone reproduces this with:
 
 ```bash
-npm test
+npm ci && npm run test:browsers && npm test
 ```
 
-## Result: 25 passed, 0 failed (11.0s)
+## Result: 25 passed, 0 failed (19.5s)
+
+This is the run after the QA corrections listed below. An independent run of `npm test` on a separate machine also passed 25 of 25 before those corrections.
 
 ```
 ok 1 - checked date and customer status match the research
@@ -49,6 +51,16 @@ ok 25 - no horizontal page overflow at 1440px for every account and view
 - **Print and export.** Print is triggered; the print layout hides the chrome and prints full URLs; a PDF renders. Markdown exports contain every source URL and the unofficial label.
 - **Layouts.** There is no horizontal page overflow at 320, 390, 768, 1024 and 1440px for all 15 account and view combinations. The drawer and menu fit at 320 and 390px, and the top-bar buttons keep accessible names when their labels are hidden.
 
+## QA corrections after independent review
+
+| Finding | Change |
+|---|---|
+| The headline "Five account names, three programme threads" contradicted the five programme rows; National Grid work is an owner grouping, not one programme | Now "Five accounts, overlapping programmes" in the Overlap view, the rail card and the viability memo, with no count of independent opportunities |
+| The Murphy summary called the change of phase "dated", but the EGL1 update is undated | Now "a public change of phase (undated update, checked 3 November 2026)" |
+| Contractor-first reachability read as fact | Marked as my untested judgement in the Murphy reasoning, the Overlap view (with a "Judgement, not verified" label), the memo and the decisions log |
+| The attribution scan named specific tools in a public test file | Now tests general attribution patterns (co-author trailers, tool credit lines, claims of AI authorship, session or model identifiers). I checked that it catches six attribution samples and flags none of four ordinary sentences. |
+| `npm ci` failed: no lockfile and no Playwright dependency | Playwright 1.63.0 is pinned as an exact dev dependency with `package-lock.json`, and `npm run test:browsers` installs Chromium. The site still has no runtime dependencies. |
+
 ## Bugs the tests caught and I fixed
 
 | Bug | Cause | Fix |
@@ -63,7 +75,7 @@ ok 25 - no horizontal page overflow at 1440px for every account and view
 axe-core 4.10.2 checked 30 page states (5 accounts × 3 views × 1440 and 390px) against WCAG 2.0 A/AA, 2.1 AA and best practice.
 
 - **First run:** one moderate issue: the programme-table scroll region and its section shared one label, creating duplicate landmarks.
-- **After the fix:** no violations across 30 page states.
+- **After the fix:** no violations across 30 page states. I re-ran the audit after the QA corrections, with the same result.
 
 axe-core was used as a one-off check and is not a project dependency.
 

@@ -8,10 +8,10 @@ export const ACTIONS = {
   murphy: {
     action: 'Prioritise',
     tone: 'evidence',
-    summary: 'One named package with a dated, public change of phase.',
+    summary: 'One named package with a public change of phase (undated update, checked 3 November 2026).',
     why: [
       'Murphy holds a single, named package (the 400kV substation at Hawthorn Pit on EGL1), and the public project update gives a current phase: piling complete, foundations progressing before buildings and electrical installation.',
-      'A contractor planning team on one package is a smaller, more reachable first conversation than owner-level procurement.',
+      'My judgement, untested: a contractor planning team on one package may be a smaller, more reachable first conversation than owner-level procurement.',
       'What learning here gives me: whether contractor planners own their package programme or work to one issued by NGET or the joint venture.',
     ],
     defer: 'Stop or route if NGET or the joint venture owns the integrated schedule and tools.',
@@ -83,15 +83,15 @@ export const LINKS = [
 ];
 
 export const CONCENTRATION = {
-  headline: 'Five account names, three programme threads.',
+  headline: 'Five accounts, overlapping programmes.',
   points: [
-    'Four of the five accounts sit inside the National Grid ecosystem: NGET as owner, and Murphy, Balfour Beatty and M Group as framework partners (M Group\'s place to be verified).',
+    'Four of the five accounts touch National Grid work: NGET as owner, and Murphy, Balfour Beatty and M Group through its frameworks (M Group\'s place to be verified). That is a grouping by owner, not one programme.',
     'Netherton Hub appears twice: SSEN Transmission as owner and Balfour Beatty as main works contractor.',
     'Only Strathaven to Smeaton sits outside both. Its owner, SP Energy Networks, is not one of the five accounts.',
   ],
   contractorFirst: [
     'Owner procurement on critical national infrastructure may be slow and security-heavy (both are flagged as blockers), and buyer roles are unverified.',
-    'A contractor planning team on one named package can say quickly whether it owns its programme, what it uses and what a dated event looks like. That is a small, cheap test of the angle.',
+    'My hypothesis, not verified: a contractor planning team on one named package may be able to say quickly whether it owns its programme, what it uses and what a dated event looks like. If so, that is a small, cheap test of the angle.',
     'If contractors work to client-issued programmes, I learn that early and route the owner conversation better, rather than spending the owner\'s attention on an untested pitch.',
   ],
 };

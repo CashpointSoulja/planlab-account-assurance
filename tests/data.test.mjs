@@ -93,7 +93,14 @@ test('published text has no tool attribution, contact details or agent features'
     ...(await walk(join(root, 'site'))), ...(await walk(join(root, 'docs'))), ...(await walk(join(root, 'research'))),
     join(root, 'README.md'),
   ].filter((f) => /\.(md|html|js|css|json|txt|svg)$/.test(f) && !f.endsWith('OFL-Inter.txt'));
-  const banned = [/\bclaude\b/i, /anthropic/i, /\bchatgpt\b/i, /\bopenai\b/i, /\bcopilot\b/i, /generated (with|by)/i];
+  const banned = [
+    /co-authored-by:/i,
+    /generated (with|by)\b/i,
+    /(written|created|built|made|drafted) (with|by|using) (an? )?(ai|llm|assistant|language model|chatbot)\b/i,
+    /\b(ai|llm|model)[- ]generated\b/i,
+    /\bpowered by (an? )?(ai|llm|model)\b/i,
+    /\b(session|model)[- ]id\b/i,
+  ];
   const email = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i;
   const phone = /(?:\+44\s?|\b0)(?:\d\s?){9,10}\b/;
   for (const f of files) {

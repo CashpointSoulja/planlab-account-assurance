@@ -10,8 +10,8 @@ The Founding SDR role (https://www.planlab.ai/jobs/founding-sales-development-re
 
 - **Research.** Five accounts and eight dated public sources, each linked from the claim it supports and checked on 3 November 2026, plus three Planlab product pages cited in the call kit. Where a newer update replaces an older one, the newer one wins. On EGL1, piling is complete, so I don't pitch the older July delay.
 - **Programme ownership.** I name the likely role and say plainly that it is unverified. Named executives are labelled as sponsors, not purchasing owners.
-- **Concentration.** Five names reduce to three programme threads. Four accounts sit in the National Grid ecosystem, and Netherton appears twice. Treating them as five independent opportunities would overstate the pipeline.
-- **Judgement.** My order puts two contractor-side tests first, because a planning team on one named package can quickly say whether it owns its programme, what it uses and what a dated event looks like. That is cheaper to learn than an enterprise owner procurement route, and it informs the owner conversation later.
+- **Concentration.** The five accounts overlap. Four touch National Grid work (an owner grouping, not one programme), and Netherton appears twice. Treating them as five independent opportunities would overstate the pipeline.
+- **Judgement.** My order puts two contractor-side tests first. My hypothesis, not verified, is that a planning team on one named package may be able to say quickly whether it owns its programme, what it uses and what a dated event looks like. If so, that is cheaper to learn than an enterprise owner procurement route, and it informs the owner conversation later.
 - **Call craft.** The NGET kit opens on a public regulatory finding without treating it as proof of a software gap. It asks who owns the work before pitching, and it handles four objections without promising security approval.
 - **Qualification discipline.** All six criteria stay Unknown until a real conversation. Client-issued programmes and existing customer or vendor threads are reasons to stop or route internally, not failures.
 

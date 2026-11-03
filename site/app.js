@@ -264,7 +264,7 @@ function renderOverlap(a) {
       <p class="legend"><span><span class="role owner">Owner</span> programme owner</span><span><span class="role contractor">Contractor</span> named in a dated source</span><span><span class="role partner-verify">Partner · verify</span> from my overlap notes, to verify</span></p>
     </section>
     <section class="block" aria-labelledby="cf-title">
-      <h2 id="cf-title">Why I'd test contractor-side first</h2>
+      <h2 id="cf-title">Why I'd test contractor-side first <span class="pill hypothesis">Judgement, not verified</span></h2>
       <ul class="points">${CONCENTRATION.contractorFirst.map((p) => `<li>${esc(p)}</li>`).join('')}</ul>
     </section>
     <section class="block" aria-labelledby="or-title">

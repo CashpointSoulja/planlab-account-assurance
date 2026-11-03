@@ -30,19 +30,29 @@
 
 ## Run it
 
-You need Node 20 or later. There are no runtime dependencies.
+You need Node 20 or later. The site has no runtime dependencies; the only dev dependency is Playwright 1.63.0, pinned exactly in `package-lock.json`, for the browser tests.
 
 ```bash
 npm run preview
 ```
 
-That builds `dist/` and serves it at http://127.0.0.1:4173/. Deep links work, for example `#/nget/call` or `#/ssen/brief?filter=unknown`.
+That builds `dist/` and serves it at http://127.0.0.1:4173/. Deep links work, for example `#/nget/call` or `#/ssen/brief?filter=unknown`. Preview needs no install.
+
+To run the tests from a fresh clone:
+
+```bash
+npm ci
+```
+
+```bash
+npm run test:browsers
+```
 
 ```bash
 npm test
 ```
 
-That runs 8 data-integrity tests and 17 browser tests in headless Chromium (needs Playwright with Chromium: `npx playwright install chromium`). Results are in [docs/TEST-RESULTS.md](docs/TEST-RESULTS.md).
+`npm ci` installs the pinned Playwright, `npm run test:browsers` downloads its Chromium build once, and `npm test` runs 8 data-integrity tests and 17 browser tests in headless Chromium. Results are in [docs/TEST-RESULTS.md](docs/TEST-RESULTS.md).
 
 ```bash
 npm run check:links

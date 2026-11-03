@@ -8,10 +8,16 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "preview": "node scripts/build.mjs && node scripts/serve.mjs dist 4173",
+    "test:browsers": "playwright install chromium",
     "test": "node scripts/build.mjs && node --test --test-concurrency=1 tests/data.test.mjs tests/e2e.test.mjs",
     "test:data": "node --test tests/data.test.mjs",
     "check:links": "node scripts/check-links.mjs",
     "deploy": "npm run build && npx wrangler pages deploy dist --project-name planlab-account-assurance"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "playwright": "1.63.0"
+  }
 }
