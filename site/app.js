@@ -255,7 +255,7 @@ function renderOverlap(a) {
     </section>
     <section class="block" aria-labelledby="mx-title">
       <h2 id="mx-title">Accounts by programme thread</h2>
-      <div class="matrix-wrap" tabindex="0" role="region" aria-labelledby="mx-title">
+      <div class="matrix-wrap" tabindex="0" role="region" aria-label="Programme table, scrolls sideways on small screens">
         <table class="matrix">
           <thead><tr><th scope="col">Account</th>${PROGRAMMES.map((p) => `<th scope="col">${esc(p.name)}<small>${esc(p.owner)}</small></th>`).join('')}</tr></thead>
           <tbody>${ordered.map((acc) => `<tr class="${acc.id === a.id ? 'is-current' : ''}"><th scope="row"><button type="button" class="link-btn" data-goto="${acc.id}">${esc(SHORT[acc.id])}</button></th>${PROGRAMMES.map((p) => cell(acc.id, p.id)).join('')}</tr>`).join('')}</tbody>
@@ -269,7 +269,7 @@ function renderOverlap(a) {
     </section>
     <section class="block" aria-labelledby="or-title">
       <h2 id="or-title">My order, and what would change it</h2>
-      <div class="matrix-wrap" tabindex="0" role="region" aria-labelledby="or-title">
+      <div class="matrix-wrap" tabindex="0" role="region" aria-label="Order table, scrolls sideways on small screens">
       <table class="order-table" style="min-width:520px">
         <thead><tr><th scope="col">#</th><th scope="col">Account</th><th scope="col">Call</th><th scope="col">Stop or route</th></tr></thead>
         <tbody>${ordered.map((acc, i) => `<tr><td>${i + 1}</td><td><button type="button" class="link-btn" data-goto="${acc.id}">${esc(SHORT[acc.id])}</button></td><td><span class="pill ${ACTIONS[acc.id].tone}">${esc(ACTIONS[acc.id].action)}</span></td><td>${esc(ACTIONS[acc.id].defer)}</td></tr>`).join('')}</tbody>

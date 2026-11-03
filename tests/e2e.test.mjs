@@ -298,6 +298,10 @@ for (const width of [320, 390, 768, 1024, 1440]) {
         assert.ok(sw <= iw, `${id}/${view}: scrollWidth ${sw} > ${iw}`);
       }
     }
+    for (const sel of ['#sources-button', '#print-button', '#export-button']) {
+      const name = await page.$eval(sel, (el) => el.innerText.trim() || [...el.querySelectorAll('span')].map((x) => x.textContent).join(' ').trim());
+      assert.ok(/Sources|Print|Export/.test(name), `${sel} keeps an accessible name at ${width}px`);
+    }
     if (width <= 390) {
       await page.click('#sources-button');
       const box = await page.locator('#sources-drawer').boundingBox();
