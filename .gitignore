@@ -1,0 +1,10 @@
+# Raw third-party capture inputs (Planlab HTML/CSS, licensed font files).
+# Kept locally for verification only; never redistributed from this public repo.
+# Hashes and provenance: docs/reference/SOURCES.md
+source-evidence/
+
+# Build output and tooling
+node_modules/
+dist/
+test-results/
+.DS_Store

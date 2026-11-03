@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Planlab brand reference</title>
+<link rel="stylesheet" href="../../assets/tokens/tokens.css">
+<style>
+  /* Local-only preview of the licensed face (git-ignored path); falls back when absent. */
+  @font-face { font-family: "HafferXH"; font-weight: 400; src: url("../../source-evidence/brand-capture-2026-11-03/HafferXH-Regular.woff2") format("woff2"); }
+  @font-face { font-family: "HafferXH"; font-weight: 500; src: url("../../source-evidence/brand-capture-2026-11-03/HafferXH-Medium.woff2") format("woff2"); }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--pl-page); color: var(--pl-navy); font: 400 13px/1.5 var(--font-brand); }
+  .sheet { max-width: 1440px; margin: 0 auto; padding: 40px; display: grid; gap: 28px; }
+  header { display: flex; align-items: center; gap: 16px; justify-content: space-between; flex-wrap: wrap; }
+  header .id { display: flex; align-items: center; gap: 14px; }
+  header h1 { margin: 0; font-size: 22px; font-weight: 500; letter-spacing: var(--track-title); }
+  header p { margin: 0; color: var(--pl-muted); font-size: 12px; }
+  .eyebrow { color: var(--pl-muted); text-transform: uppercase; letter-spacing: var(--track-eyebrow); font-size: 10.5px; font-weight: 500; margin: 0 0 12px; }
+  .panel { background: #fff; border-radius: var(--r-panel); box-shadow: var(--sh-card); padding: 20px 22px; }
+  .grid2 { display: grid; grid-template-columns: 1.35fr 1fr; gap: 28px; align-items: start; }
+  .shot { width: 100%; height: auto; display: block; border-radius: 8px; box-shadow: 0 0 0 1px #0e21341a; }
+  ol.callouts { margin: 12px 0 0; padding-left: 18px; color: var(--pl-muted); font-size: 12px; columns: 2; column-gap: 24px; }
+  ol.callouts b { color: var(--pl-navy); font-weight: 500; }
+  .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 10px; }
+  .sw { border-radius: 8px; box-shadow: 0 0 0 1px #0e21341a; overflow: hidden; background: #fff; }
+  .sw i { display: block; height: 52px; }
+  .sw div { padding: 7px 9px 8px; font-size: 11px; line-height: 1.35; }
+  .sw b { display: block; font-weight: 500; font-size: 11.5px; }
+  .sw code { font-family: var(--font-mono); font-size: 10.5px; color: var(--pl-muted); }
+  .type-row { display: grid; grid-template-columns: 150px 1fr; gap: 16px; align-items: baseline; padding: 9px 0; border-bottom: 1px solid var(--pl-row); }
+  .type-row:last-child { border-bottom: 0; }
+  .type-row small { color: var(--pl-muted); font-size: 11px; }
+  .specimens { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .spec { background: var(--pl-ground); background-image: radial-gradient(var(--pl-dot) 1px, transparent 1.2px); background-size: 16px 16px; border-radius: 10px; padding: 18px; min-height: 120px; display: grid; gap: 10px; align-content: start; }
+  .spec > small { color: var(--pl-muted); font-size: 10.5px; text-transform: uppercase; letter-spacing: var(--track-eyebrow); font-weight: 500; }
+  .navcell { background: #fffc; border-radius: var(--r-small); height: 60px; padding: 0 16px; display: inline-flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 500; color: #000; }
+  .cta { background: var(--pl-forest); color: #fff; border-radius: var(--r-pill); height: 52px; padding: 0 26px; display: inline-flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 500; box-shadow: var(--sh-cta); width: max-content; }
+  .cta svg { fill: var(--pl-peach); width: 14px; height: 14px; }
+  .caps { display: flex; flex-wrap: wrap; gap: 8px; }
+  .cap { height: 32px; padding: 0 13px 0 9px; border-radius: var(--r-pill); background: #ffffffd9; border: 1px solid #0e21341f; display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 500; }
+  .cap .ai { width: 18px; height: 18px; border-radius: 50%; background: var(--pl-navy); }
+  .cap.on { background: var(--pl-navy); color: #fff; border-color: var(--pl-navy); }
+  .cap.on .ai { background: var(--pl-orange); }
+  .topbar { background: var(--pl-paper); border-radius: 10px 10px 0 0; height: 44px; padding: 0 12px; display: flex; align-items: center; gap: 6px; font-size: 12px; box-shadow: 0 0 0 1px #0e21341a; }
+  .ws { display: inline-flex; gap: 6px; align-items: center; font-weight: 500; }
+  .ws i { background: var(--pl-peach); color: var(--pl-badge-ink); border-radius: 3px; padding: 2px 3px; font-size: 8.5px; font-style: normal; font-weight: 500; }
+  .crumb { display: grid; line-height: 1.15; } .crumb small { color: var(--pl-muted); font-size: 8.5px; }
+  .sep { color: #0e21344d; }
+  .card { background: #fff; border-radius: var(--r-panel); box-shadow: var(--sh-card); padding: 16px 18px; }
+  .card h4 { margin: 4px 0 0; font-size: 19px; font-weight: 500; letter-spacing: var(--track-title); }
+  .chip { color: var(--pl-link); background: #fff; border: 1px solid var(--pl-link-border); border-radius: 4px; padding: 3px 8px 3px 6px; font-size: 10.5px; font-weight: 500; display: inline-flex; gap: 5px; align-items: center; width: max-content; }
+  .chip svg { width: 11px; height: 11px; fill: none; stroke: currentColor; stroke-width: 2; }
+  .task { display: flex; gap: 7px; align-items: center; font-size: 11.2px; }
+  .task i { width: 12px; height: 12px; border-radius: 50%; background: var(--pl-ok); display: inline-block; }
+  .pills { display: flex; flex-wrap: wrap; gap: 6px; }
+  .pill { border-radius: 999px; padding: 2px 8px; font-size: 10.5px; font-weight: 500; }
+  .tabs { background: var(--pl-tabs); border-radius: 9px; padding: 3px; display: inline-flex; gap: 2px; font-size: 10.5px; font-weight: 500; width: max-content; }
+  .tabs span { padding: 4px 10px; border-radius: 7px; color: var(--pl-muted); }
+  .tabs .cur { background: #fff; color: var(--pl-navy); box-shadow: var(--sh-tab); }
+  .note { border-left: 3px solid var(--pl-bad); background: var(--pl-flag-bg); border-radius: 8px; padding: 10px 12px; font-size: 11.5px; }
+  .map { display: grid; grid-template-columns: 150px 1fr 170px; grid-template-rows: 34px 200px; gap: 8px; background: var(--pl-ground); background-image: radial-gradient(var(--pl-dot) 1px, transparent 1.2px); background-size: 16px 16px; border-radius: 12px; padding: 10px; font-size: 11px; }
+  .map > div { border-radius: 8px; background: #fff; box-shadow: 0 0 0 1px #0e213417; padding: 8px 10px; }
+  .map .bar { grid-column: 1 / -1; background: var(--pl-paper); display: flex; align-items: center; gap: 8px; }
+  .map b { font-weight: 500; display: block; margin-bottom: 4px; }
+  .map p { margin: 0; color: var(--pl-muted); }
+  footer { color: var(--pl-muted); font-size: 11px; }
+  @media (max-width: 900px) { .grid2, .specimens { grid-template-columns: 1fr; } ol.callouts { columns: 1; } .sheet { padding: 16px; } .map { grid-template-columns: 1fr; grid-template-rows: auto; } }
+</style>
+</head>
+<body>
+<main class="sheet">
+  <header>
+    <div class="id">
+      <img src="../../assets/brand/planlab-logo.svg" width="49" height="24" alt="Planlab logo">
+      <div>
+        <h1>Brand reference contact sheet</h1>
+        <p>Values from the planlab.ai homepage source captured 3 November 2026. Reference for the account-assurance concept.</p>
+      </div>
+    </div>
+    <p>Independent concept by Ayo Ahmed, not affiliated with Planlab.</p>
+  </header>
+
+  <section class="grid2">
+    <div class="panel">
+      <p class="eyebrow">1 · Captured homepage, 1280 × 720</p>
+      <img class="shot" src="planlab-home-2026-11-03.png" alt="Planlab homepage: nav cells, two-colour headline, green pill CTA, capability chips and a product mock with a Riverside / Phase 1 breadcrumb, a monthly report card and a narrow project-agent rail.">
+      <ol class="callouts">
+        <li><b>Nav cells</b>: white 80%, radius 4, 60px tall, 4px gaps</li>
+        <li><b>Mark</b>: three 24px diamonds at 0 / 12 / 24px</li>
+        <li><b>H1</b>: HafferXH 500, 50px, −0.035em, forest + copper</li>
+        <li><b>CTA</b>: forest pill, 52px, peach icon</li>
+        <li><b>Capability chips</b>: 32px pills, navy when selected</li>
+        <li><b>Top bar</b>: paper #f6f6f2, 44px, breadcrumb</li>
+        <li><b>Ground</b>: #eef0f2 with a 16px dot grid</li>
+        <li><b>Report card</b>: white, radius 10, long soft shadow</li>
+        <li><b>Right rail</b>: 200px, source chips, task checks</li>
+      </ol>
+    </div>
+    <div class="panel">
+      <p class="eyebrow">2 · Type: HafferXH 400 / 500</p>
+      <div class="type-row"><small>H1 · 50 / 500 / −.035em</small><span style="font-size:40px;font-weight:500;letter-spacing:-.035em;line-height:1.2;color:var(--pl-forest)">Project controls <span style="color:var(--pl-copper)">assured</span></span></div>
+      <div class="type-row"><small>Title · 22 / 500 / −.02em</small><span style="font-size:22px;font-weight:500;letter-spacing:-.02em">National Grid Electricity Transmission</span></div>
+      <div class="type-row"><small>Nav / CTA · 16 / 500</small><span style="font-size:16px;font-weight:500">Platform · Solutions · Get in touch</span></div>
+      <div class="type-row"><small>Body · 13.5 / 400</small><span style="font-size:13.5px">Ofgem's decision questioned QSRA assumptions. This is a public finding, not proof of a software gap.</span></div>
+      <div class="type-row"><small>Product · 12 / 400</small><span style="font-size:12px">Reconciling diary lines to activities</span></div>
+      <div class="type-row"><small>Eyebrow · 10.5 / 500</small><span class="eyebrow" style="margin:0">Account brief · checked 3 Nov 2026</span></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <p class="eyebrow">3 · Colour</p>
+    <div class="swatches">
+      <div class="sw"><i style="background:#07392d"></i><div><b>Forest</b><code>#07392d</code><br>H1, CTA</div></div>
+      <div class="sw"><i style="background:#b4652f"></i><div><b>Copper</b><code>#b4652f</code><br>H1 accent</div></div>
+      <div class="sw"><i style="background:#f7dac5"></i><div><b>Peach</b><code>#f7dac5</code><br>Brand, badges</div></div>
+      <div class="sw"><i style="background:#c6dfe9"></i><div><b>Pale blue</b><code>#c6dfe9</code><br>Glows</div></div>
+      <div class="sw"><i style="background:#0e2134"></i><div><b>Navy</b><code>#0e2134</code><br>Product ink</div></div>
+      <div class="sw"><i style="background:#f4f8f8"></i><div><b>Page</b><code>#f4f8f8</code><br>Site wash</div></div>
+      <div class="sw"><i style="background:#f6f6f2"></i><div><b>Paper</b><code>#f6f6f2</code><br>Top bar</div></div>
+      <div class="sw"><i style="background:#eef0f2"></i><div><b>Ground</b><code>#eef0f2</code><br>Canvas</div></div>
+      <div class="sw"><i style="background:#5d6b79"></i><div><b>Muted</b><code>#5d6b79</code><br>5.5:1 on white</div></div>
+      <div class="sw"><i style="background:#e57528"></i><div><b>Orange</b><code>#e57528</code><br>Active marker</div></div>
+      <div class="sw"><i style="background:#0066cc"></i><div><b>Link</b><code>#0066cc</code><br>Source chips</div></div>
+      <div class="sw"><i style="background:#1a5f5a"></i><div><b>Teal</b><code>#1a5f5a</code><br>Focus ring</div></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <p class="eyebrow">4 · Geometry and components</p>
+    <div class="specimens">
+      <div class="spec"><small>Nav cell · radius 4</small><span><span class="navcell"><img src="../../assets/brand/planlab-logo.svg" width="49" height="24" alt="">Planlab</span></span></div>
+      <div class="spec"><small>Primary CTA · pill 52px</small><span class="cta"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1l4 4-4 4-4-4zM8 7l4 4-4 4-4-4z" opacity=".9"/></svg>Get in touch</span></div>
+      <div class="spec"><small>Capability chips · 32px</small><div class="caps"><span class="cap on"><i class="ai"></i>Selected</span><span class="cap"><i class="ai"></i>Unselected</span></div></div>
+      <div class="spec"><small>Top bar + breadcrumb · 44px</small><div class="topbar"><span class="ws"><i>RV</i>Riverside ⌄</span><span class="sep">/</span><span class="crumb">Phase 1 ⌄<small>Projects</small></span></div></div>
+      <div class="spec"><small>Report card · radius 10</small><div class="card"><span class="eyebrow" style="margin:0">Monthly report · May 2025</span><h4>1. Headline position</h4></div></div>
+      <div class="spec"><small>Source chip + task row</small><span class="chip"><svg viewBox="0 0 12 12"><path d="M3 1.5h4l2 2v7H3z"/></svg>Site diary · source</span><span class="task"><i></i>Reconciling diary lines to activities</span></div>
+      <div class="spec"><small>Status pills (concept, AA-adjusted)</small><div class="pills"><span class="pill" style="color:var(--status-evidence-fg);background:var(--status-evidence-bg)">Evidence</span><span class="pill" style="color:var(--status-hypothesis-fg);background:var(--status-hypothesis-bg)">Hypothesis</span><span class="pill" style="color:var(--status-unknown-fg);background:var(--status-unknown-bg)">Unknown</span><span class="pill" style="color:var(--status-risk-fg);background:var(--status-risk-bg)">Blocker</span></div></div>
+      <div class="spec"><small>Segmented tabs · radius 9 / 7</small><span class="tabs"><span class="cur">Brief</span><span>Overlap</span><span>Call kit</span></span></div>
+      <div class="spec"><small>Flag note · 3px rule</small><div class="note"><b style="font-weight:500">Overlap.</b> Same Netherton programme as the Balfour account.</div></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <p class="eyebrow">5 · Mapping to the account-assurance workspace</p>
+    <div class="map">
+      <div class="bar"><img src="../../assets/brand/planlab-logo.svg" width="33" height="16" alt=""> <b style="margin:0">Account assurance</b> <span class="sep">/</span> UK electricity transmission <span class="sep">/</span> Account ⌄ <span class="sep">/</span> Project</div>
+      <div><b>Accounts rail</b><p>Five accounts in my order, seat pill, project, active marker. One unofficial label at the foot.</p></div>
+      <div><b>Evidence report</b><p>Brief · Overlap · Call kit. Evidence, hypothesis, unknown and blocker labels; source chips on every claim; why prioritise or defer.</p></div>
+      <div><b>Qualification pane</b><p>Six criteria, all Unknown until asked. Questions to ask, stop/route rules, local practice notes.</p></div>
+    </div>
+  </section>
+
+  <footer>Planlab name, logo, typeface and imagery belong to their owners and are shown here for reference. Provenance: docs/BRAND.md · docs/reference/SOURCES.md.</footer>
+</main>
+</body>
+</html>

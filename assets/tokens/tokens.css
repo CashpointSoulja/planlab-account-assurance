@@ -1,0 +1,86 @@
+/*
+ * Account assurance concept: design tokens.
+ * Values are taken from the planlab.ai homepage source captured on 2026-11-03
+ * (see docs/BRAND.md for provenance and docs/STYLE-GUIDE.md for usage).
+ * Brand font files are licensed and are not bundled; Inter (OFL) is the bundled fallback
+ * when HafferXH is not installed locally.
+ */
+:root {
+  /* Website brand scope (homepage hero) */
+  --pl-forest: #07392d;        /* hero ink, primary CTA */
+  --pl-forest-hover: #0b4a3b;
+  --pl-copper: #b4652f;        /* hero accent line */
+  --pl-teal: #1a5f5a;          /* focus outline */
+  --pl-blue: #c6dfe9;
+  --pl-blue-2: #dcebf1;
+  --pl-peach: #f7dac5;
+  --pl-page: #f4f8f8;          /* sampled page wash */
+  --pl-site-muted: #5f7a76;
+
+  /* Product mock scope (homepage app stage) */
+  --pl-navy: #0e2134;          /* product ink, selected chip */
+  --pl-slate: #3d6585;         /* product teal: icons, secondary series */
+  --pl-muted: #5d6b79;
+  --pl-line: #e3e7eb;
+  --pl-paper: #f6f6f2;         /* top bar */
+  --pl-ground: #eef0f2;        /* workspace canvas */
+  --pl-dot: #0e213412;         /* 1px dot, 16px grid */
+  --pl-orange: #e57528;        /* active indicator */
+  --pl-bubble: #f1f2f4;
+  --pl-th: #f4f5f7;
+  --pl-row: #eef1f4;
+  --pl-tabs: #eef0f3;
+  --pl-link: #0066cc;          /* source chips */
+  --pl-link-border: #0ea5e94d;
+  --pl-mark: #0e0e10;
+  --pl-badge-ink: #7a3f12;     /* workspace initials on peach */
+  --pl-placeholder: #98a3ae;   /* decorative only, 2.6:1 */
+
+  /* Status pills (from the mock's .pill.ok / .cm / .bad / .na) */
+  --pl-ok: #1e7b4a;   --pl-ok-bg: #e5f3ea;
+  --pl-cm: #a86f12;   --pl-cm-bg: #fdf1dc;
+  --pl-bad: #c8442f;  --pl-bad-bg: #fce9e5;
+  --pl-na: #66717d;   --pl-na-bg: #eef1f2;
+  --pl-flag-bg: #fdf0ec;
+
+  /* Evidence semantics for this concept. Pill backgrounds as captured; amber,
+     red and grey text darkened to pass WCAG AA at 10.5-12px (>= 4.9:1). */
+  --status-evidence-fg: #1e7b4a;   --status-evidence-bg: var(--pl-ok-bg);   /* 4.6:1 */
+  --status-hypothesis-fg: #8f5d0e; --status-hypothesis-bg: var(--pl-cm-bg); /* 5.0:1 */
+  --status-unknown-fg: #5a6571;    --status-unknown-bg: var(--pl-na-bg);    /* 5.2:1 */
+  --status-risk-fg: #b0402c;       --status-risk-bg: var(--pl-bad-bg);      /* 5.0:1 */
+
+  /* Type */
+  --font-brand: "HafferXH", "Haffer XH", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --w-regular: 400;
+  --w-medium: 500;
+  --track-h1: -0.035em;
+  --track-title: -0.02em;
+  --track-eyebrow: 0.06em;
+
+  /* Radii */
+  --r-small: 4px;   /* nav cells, source chips */
+  --r-medium: 8px;  /* KPI tiles, notes, docs rows, compact panels */
+  --r-panel: 10px;  /* report card, agent rail, bubbles */
+  --r-large: 12px;  /* large panels */
+  --r-frame: 14px;  /* app frame */
+  --r-pill: 999px;
+
+  /* Elevation */
+  --sh-frame: 0 50px 100px -48px #0e213473, 0 0 0 1px #0e21341a;
+  --sh-card: 0 24px 60px -32px #0e213473, 0 0 0 1px #0e213417;
+  --sh-raised: 0px 1px 5px -4px #00000080, 0px 4px 8px 0px #0000000d;
+  --sh-cta: 0 10px 24px -12px #07392db3;
+  --sh-tab: 0 1px 2px #0e21341f;
+
+  /* Space: 4px base unit (product theme) */
+  --u1: 4px; --u2: 8px; --u3: 12px; --u4: 16px; --u5: 20px;
+  --u6: 24px; --u8: 32px; --u10: 40px;
+
+  /* Motion */
+  --ease: cubic-bezier(.65, 0, .2, 1);
+  --ease-standard: cubic-bezier(.4, 0, .2, 1);
+  --dur-fast: .2s;
+  --dur-medium: .3s;
+}
